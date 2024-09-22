@@ -1,0 +1,134 @@
+body {
+  background: linear-gradient(to right, #f9f9f9, #ffffff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #444;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Menggunakan full height untuk body */
+}
+
+.App {
+  width: 80vw; /* Memberikan ruang di kanan dan kiri */
+  max-width: 1200px; /* Menentukan lebar maksimum */
+  height: auto; /* Tinggi otomatis */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  margin-top: 50px; /* Jarak atas */
+  margin-bottom: 50px; /* Jarak bawah */
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+input {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 kolom */
+  grid-template-rows: repeat(2, auto); /* 2 baris */
+  gap: 20px; /* Menambahkan jarak antar card */
+  width: 100%; /* Memastikan daftar buku memenuhi lebar */
+  justify-items: center; /* Memusatkan setiap item di dalam grid */
+  margin-bottom: 20px; /* Jarak bawah antara daftar buku dan elemen lainnya */
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  width: 100%; /* Membuat kartu fleksibel memenuhi lebar */
+  max-width: 150px; /* Mengatur lebar maksimum kartu */
+}
+
+.card-img {
+  width: 80%; /* Mengubah lebar gambar */
+  max-width: 100px; /* Menentukan lebar maksimum */
+  height: auto; /* Memastikan aspek rasio terjaga */
+  border-radius: 10px;
+  margin: 0 auto; /* Memusatkan gambar */
+}
+
+.card-title {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.page-item {
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.page-item.active {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.page-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 1.5rem;
+  float: right;
+}
+
+.popup-img {
+  width: 80%;
+  max-width: 200px;
+  height: auto;
+  margin: 10px auto;
+}
